@@ -1,0 +1,3 @@
+insert into usuarios (id, username, password, role) values (500, "kiko@gmail.com", "$2a$12$BXL1Le.Dfv9BA2eFxriqmuqt3DXb00qnOb3SpC.XxJ7u6GaAZwiZm", "ROLE_CLIENTE");
+insert into usuarios (id, username, password, role) values (501, "admin@gmail.com", "$2a$12$BXL1Le.Dfv9BA2eFxriqmuqt3DXb00qnOb3SpC.XxJ7u6GaAZwiZm", "ROLE_ADMIN");
+insert into usuarios (id, username, password, role) values (502, "user@gmail.com", "$2a$12$BXL1Le.Dfv9BA2eFxriqmuqt3DXb00qnOb3SpC.XxJ7u6GaAZwiZm", "ROLE_CLIENTE");
