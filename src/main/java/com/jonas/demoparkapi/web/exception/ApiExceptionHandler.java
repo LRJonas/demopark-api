@@ -38,7 +38,7 @@ public class ApiExceptionHandler {
                 contentType(MediaType.APPLICATION_JSON). // retorna o tipo de conteúdo como JSON
                 body(new ErrorMessage(request, HttpStatus.UNPROCESSABLE_ENTITY, "Campo(s) Inválidos", result));
     }
-    @ExceptionHandler({UsernameUniqueViolationException.class, CpfUniqueViolationException.class}) // anotação para indicar a exceção que foi criada para o erro de nome de usuário já existente
+    @ExceptionHandler({UsernameUniqueViolationException.class, CpfUniqueViolationException.class, CodigoUniqueViolationException.class}) // anotação para indicar a exceção que foi criada para o erro de nome de usuário já existente
     public ResponseEntity<ErrorMessage> uniqueViolationException(RuntimeException ex,
                                                                         HttpServletRequest request) {
         log.error("Erro na API",ex);
