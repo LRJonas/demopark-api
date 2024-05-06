@@ -43,4 +43,13 @@ public class ClienteService {
     public Cliente buscarPorUsuario(Long id) { // método para buscar cliente por id do usuário, somente o usuário autenticado pode acessar os dados do cliente
         return clienteRepository.findByUsuarioId(id);
     }
+
+    @Transactional(readOnly = true)
+    public Cliente buscarPorCpf(String cpf) {
+
+        return clienteRepository.findByCpf(cpf).orElseThrow(
+                () -> new EntityNotFoundException(String.format("Cliente com CPF %s não encontrado", cpf))
+        );
+
+    }
 }
